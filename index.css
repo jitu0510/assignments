@@ -1,0 +1,42 @@
+div.img{
+    width: 100%;
+}
+.fa-color{
+    color: blue;
+}
+
+.card{
+    background: linear-gradient(white,white 50%,royalblue 50%,royalblue);
+    background-size: 100% 200%;
+    transition: 2s;
+    box-shadow: 5px 5px 10px 10px grey;
+    
+}
+.card:hover{
+    background-position: 100% 100%;
+    
+}
+.fa-size{
+    border-radius: 50%;
+    background-color: white;
+    padding: 14px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.story{
+    background-color: rgb(73, 185, 152);
+    margin-top: 5%;
+    margin-bottom: 30px;
+}
+.story-text{
+    margin-left: 35%;
+    margin-bottom: 30px;
+}
+.p1,.p2,.p3{
+    
+}
+.pb{
+    margin-top: 100px;
+    background-color: rgb(127, 170, 127);
+    margin-right: 50px;
+}

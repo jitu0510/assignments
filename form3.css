@@ -1,0 +1,27 @@
+body{
+    margin-left: 30%;
+    margin-top: 20px;
+   
+}
+div{
+    background-color: rgb(204, 204, 90);
+    margin-right: 40%;
+}
+form{
+    margin-left: 10%;
+}
+header{
+    margin-bottom: 30px;
+    margin-left: 25%;
+    font-size: 50px;
+    color: indigo;
+}
+#submit{
+    margin-left: 25%;
+    margin-top: 30px;
+    padding: 10px 10px 10px 10px;
+    background-color: grey;
+    border:2px solid rgb(209, 88, 88);
+    border-radius: 3px;
+    margin-bottom: 10%;
+}

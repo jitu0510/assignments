@@ -1,0 +1,24 @@
+body{
+    margin-left: 35%;
+    margin-right: 45%;
+}
+header{
+    color: red;
+    font-size: 40px;
+    margin-left: 15%;
+    margin-bottom: 70px;
+}
+#submit{
+    color: blueviolet;
+    margin-top: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 35%;
+}
+#submit:hover{
+    color: red;
+    background-color: burlywood;
+}
+div{
+    background-color: grey;
+}
