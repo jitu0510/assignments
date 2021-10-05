@@ -164,6 +164,45 @@ public static void setStandard(String standard,int id)
 	}
 	
 }
+
+//To set New Id
+public static void setId(int newId,int id)
+{
+	EntityManagerFactory factory=null;
+	EntityManager manager=null;
+	EntityTransaction transaction=null;
+	try {
+		factory=Persistence.createEntityManagerFactory("emp1");
+		manager=factory.createEntityManager();
+		Student student=manager.find(Student.class, id);
+		String name=student.getName();
+		String standard=student.getStandard();
+		int phoneNo=student.getPhoneno();
+		
+		Student student1 = new Student();
+		student1.setName(name);
+		student1.setRollno(newId);
+		student1.setPhoneno(phoneNo);
+		student1.setStandard(standard);
+		
+		
+		transaction=manager.getTransaction();
+		transaction.begin();
+		
+		manager.persist(student1);
+		manager.remove(student);
+		transaction.commit();
+		
+		
+		//System.out.println(employee.getDesignation());
+	}catch (Exception e) {
+		e.printStackTrace();
+	}finally {
+		factory.close();
+		manager.close();
+	}
+	
+}
 //To Delete a Student
 public static void deleteStudent(int id)
 {
@@ -224,6 +263,7 @@ public static void deleteStudent(int id)
 				boolean check1=verifyId(id1);
 				String name=null;
 				String standard=null;
+				int newId=0;
 				int phoneno=0;
 				
 				if(check1==true) {
@@ -250,6 +290,14 @@ public static void deleteStudent(int id)
 						System.out.println("Enter new standard");
 						standard=scanner.next();
 						setStandard(standard,id1);
+					}
+					
+					System.out.println("Do you want to update Roll Number(Y/N)");
+					char idOption=scanner.next().charAt(0);
+					if(idOption=='Y' || idOption=='y') {
+						System.out.println("Enter new Id");
+						newId=scanner.nextInt();
+						setId(newId,id1);
 					}
 					
 				}else {
